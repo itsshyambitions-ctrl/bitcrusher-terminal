@@ -215,6 +215,32 @@ background:#00ffcc;
 
 }
 
+.qr-terminal{
+    text-align:center;
+    margin-top:15px;
+}
+
+.qr-code {
+    width: 180px;
+    height: 180px;
+
+    background: white;
+    padding: 15px;
+
+    border: 2px solid #00ffcc;
+
+    box-shadow:
+        0 0 10px #00ffcc,
+        0 0 20px #ff00ff;
+}
+
+.qr-text{
+    margin-top:10px;
+    color:#00ffcc;
+    font-size:13px;
+    line-height:1.4;
+}
+
 .download-terminal {
   text-align: center;
   padding: 8px 0;
@@ -490,17 +516,19 @@ border-radius:8px;
 
 <h2>Request Access</h2>
 
-<p>
-Scan credentials below.
-Approved clients only.
-</p>
+<div class="qr-terminal">
 
+    <img
+    class="qr-code"
+    src="images/qr-code.png"
+    alt="Bitcrusher Access QR Code">
 
-<img 
-class="avatar"
-src="qr-code.png"
->
+    <p class="qr-text">
+        Scan to establish<br>
+        encrypted connection.
+    </p>
 
+</div>
 
 </div>
 

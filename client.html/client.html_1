@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>BitNet</title>
+
+<style>
+
+body{
+
+background:black;
+
+color:#00ffcc;
+
+font-family:Courier New;
+
+padding:40px;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>ACCESS GRANTED</h1>
+
+<p>Welcome back, Client.</p>
+
+<p>You are now connected to BitNet.</p>
+
+</body>
+
+</html>

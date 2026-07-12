@@ -30,7 +30,110 @@ h1 {
   text-shadow: 0 0 10px #00ffcc;
 }
 
+.banner {
+  display: block;
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  margin: 0 auto 15px;
+  border: 2px solid #ff00ff;
+  box-shadow:
+    0 0 10px #ff00ff,
+    0 0 20px #00ffcc;
+}
+
+.avatar {
+  width: 100%;
+  height: auto;
+  border: 4px solid #ff00ff;
+  box-shadow:
+    0 0 10px #ff00ff,
+    0 0 20px #00ffcc;
+  border-radius: 8px;
+}
+
+.network-panel {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 15px;
+  align-items: center;
+  background: #090014;
+  border: 2px solid #00ffcc;
+  padding: 12px;
+  margin: 15px 0;
+  box-shadow: 0 0 12px #00ffcc;
+}
+
+.network-images {
+  display: grid;
+  gap: 10px;
+}
+
+.network-images img {
+  display: block;
+  width: 100%;
+  max-width: 240px;
+  height: auto;
+  margin: 0 auto;
+  border: 2px solid #00ffcc;
+  box-shadow: 0 0 12px #00ffcc;
+}
+
+.network-info h2 {
+  margin: 0 0 8px;
+  color: #ff00ff;
+  text-shadow: 0 0 8px #00ffcc;
+}
+
+.network-info p {
+  margin: 0 0 10px;
+}
+
+.status-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 4px 0;
+  border-bottom: 1px dashed #00ffcc;
+}
+
+.online-status {
+  color: #00ffcc;
+}
+
+.network-note {
+  margin-top: 10px;
+  font-style: italic;
+  color: #ffcc00;
+}
+
+.small-gif {
+  width: 70px;
+  height: auto;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+.media-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.media-card {
+  background: #090014;
+  border: 1px solid #00ffcc;
+  padding: 8px;
+  text-align: center;
+}
+
+.media-card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+}
+
 .blink {
+  margin: 15px 0 10px;
   animation: blink 1s infinite;
   color: yellow;
   text-align: center;
@@ -42,9 +145,9 @@ h1 {
 }
 
 .grid {
-  display: grid;
-  grid-template-columns: 280px 1fr;
-  gap: 15px;
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 15px;
 }
 
 .box {
@@ -72,8 +175,13 @@ h1 {
 }
 
 marquee {
- color:#ffcc00;
- font-weight:bold;
+  display: block;
+  margin-bottom: 15px;
+  padding: 6px 0;
+  border-top: 1px solid #ff00ff;
+  border-bottom: 1px solid #ff00ff;
+  color:#ffcc00;
+  font-weight:bold;
 }
 
 
@@ -107,6 +215,34 @@ background:#00ffcc;
 
 }
 
+.download-terminal {
+  text-align: center;
+  padding: 8px 0;
+}
+
+.download-terminal img {
+  display: block;
+  width: 96px;
+  height: auto;
+  margin: 0 auto 10px;
+}
+
+.download-terminal h3 {
+  color: #ff66ff;
+  margin: 8px 0 6px;
+}
+
+.download-button {
+  margin-top: 10px;
+  padding: 10px 16px;
+  background: #ff00ff;
+  color: black;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 0 10px #ff00ff;
+}
+
 
 .top8 {
 
@@ -127,6 +263,96 @@ font-size:12px;
 
 }
 
+.network-panel {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 18px;
+  align-items: stretch;
+
+  margin: 20px 0;
+  padding: 14px;
+
+  background: #090016;
+  border: 2px solid #00ffcc;
+  box-shadow:
+    0 0 10px #00ffcc,
+    inset 0 0 18px rgba(255, 0, 255, 0.18);
+}
+
+.network-images {
+  display: grid;
+  gap: 10px;
+}
+
+.network-images img {
+  display: block;
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+
+  border: 2px solid #ff00ff;
+  box-shadow: 0 0 12px #00ffcc;
+}
+
+.network-info {
+  border-left: 1px dashed #00ffcc;
+  padding-left: 18px;
+}
+
+.network-info h2 {
+  margin-top: 0;
+  color: #ff66ff;
+  border-bottom: 1px dashed #00ffcc;
+  padding-bottom: 8px;
+}
+
+.status-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+
+  margin: 8px 0;
+  padding: 7px 9px;
+
+  background: #17002f;
+  border-left: 3px solid #ff00ff;
+}
+
+.status-row strong {
+  color: #ffcc00;
+}
+
+.online-status {
+  color: #00ff66 !important;
+  animation: statusPulse 1.2s infinite;
+}
+
+.network-note {
+  margin-top: 15px;
+  color: #ff66ff;
+  font-size: 13px;
+  text-align: center;
+}
+
+@keyframes statusPulse {
+  50% {
+    opacity: 0.45;
+  }
+}
+
+@media (max-width: 750px) {
+  .network-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .network-info {
+    border-left: none;
+    border-top: 1px dashed #00ffcc;
+    padding-left: 0;
+    padding-top: 15px;
+  }
+}
+
 </style>
 
 </head>
@@ -145,6 +371,11 @@ font-size:12px;
 ☠ BITCRUSHER//SERVICE NODE ☠
 </h1>
 
+<img
+  class="banner"
+  src="images/Bitcrusher.banner.png"
+  alt="Bitcrusher Banner"
+>
 
 <p class="blink">
 ENCRYPTED CONNECTION ESTABLISHED // TRUST IS A LIABILITY
@@ -155,6 +386,54 @@ ENCRYPTED CONNECTION ESTABLISHED // TRUST IS A LIABILITY
 >>> accepting contracts // recovering ghosts // moving chrome // breaking corporate chains <<<
 </marquee>
 
+<div class="network-panel">
+
+  <div class="network-images">
+    <img
+      src="images/mindtv.gif"
+      alt="Neural network monitor"
+    >
+
+    <img
+      src="images/arm.gif"
+      alt="Cybernetic interface"
+    >
+  </div>
+
+  <div class="network-info">
+    <h2>LIVE NETWORK FEED</h2>
+
+    <p>
+      Monitoring nearby corporate traffic, unsecured implants,
+      and compromised access points.
+    </p>
+
+    <div class="status-row">
+      <span>NODE STATUS</span>
+      <strong class="online-status">● ONLINE</strong>
+    </div>
+
+    <div class="status-row">
+      <span>ENCRYPTION</span>
+      <strong>ACTIVE</strong>
+    </div>
+
+    <div class="status-row">
+      <span>TRACE RISK</span>
+      <strong>LOW</strong>
+    </div>
+
+    <div class="status-row">
+      <span>LOCAL THREATS</span>
+      <strong>03 DETECTED</strong>
+    </div>
+
+    <p class="network-note">
+      Unauthorized observers will be disconnected.
+    </p>
+  </div>
+
+</div>
 
 <div class="grid">
 
@@ -167,7 +446,7 @@ ENCRYPTED CONNECTION ESTABLISHED // TRUST IS A LIABILITY
 
 <div class="box">
 
-<h2>Bitcrusher.exe</h2>
+<h2>Bitcrusher</h2>
 
 <img 
 class="avatar" 
@@ -237,6 +516,90 @@ src="qr-code.png"
 
 </div>
 
+<div class="box">
+
+<h2>
+Current Operation
+</h2>
+
+<img
+class="side-gif"
+src="images/bikeridegif.gif"
+alt="Night Run">
+
+<p style="text-align:center;">
+
+═══════════════════════<br>
+
+<b>CURRENT OPERATION</b><br>
+(your bikeride GIF)<br>
+
+═══════════════════════<br>
+
+<b>NETWORK STATUS</b><br>
+🟢 ONLINE<br>
+
+PING: 18ms<br>
+TRACE RISK: LOW<br>
+ENCRYPTION: AES-512<br>
+
+═══════════════════════<br>
+
+<b>NOW PLAYING</b><br>
+♪ Memory Reboot<br>
+VØJ & Narvent<br>
+
+[■■■■■■■■□□□□] 2:18 / 3:42<br>
+
+═══════════════════════<br>
+
+<b>CLIENT TESTIMONIAL</b><br>
+★★★★★<br>
+
+"Package arrived before<br>
+the security team noticed<br>
+it was gone."<br>
+
+- Anonymous<br>
+
+═══════════════════════<br>
+
+<b>SYSTEM UPTIME</b><br>
+244 DAYS<br>
+17 HOURS<br>
+09 MINUTES<br>
+
+═══════════════════════<br>
+
+<b>LATEST LOG</b><br>
+[12:08]<br>
+Firewall bypassed.<br>
+
+[12:15]<br>
+Package delivered.<br>
+
+[12:42]<br>
+Corporate trace blocked.<br>
+
+═══════════════════════<br>
+
+<b>TOP SKILLS</b><br>
+██████████ Ghost Recovery<br>
+
+█████████ Dead Drops<br>
+
+██████████ Cybernetics<br>
+
+████████ Digital Clean-Up<br>
+
+═══════════════════════
+
+</p>
+
+</div>
+
+<p style="text-align:center; letter-spacing:2px; margin:8px 0 0;">━━━━━━━━━━━━━━</p>
+
 
 </div>
 
@@ -252,7 +615,7 @@ src="qr-code.png"
 
 <div class="box">
 
-<h2>About Bitcrusher</h2>
+<h2>About</h2>
 
 
 <p>
@@ -282,11 +645,10 @@ No digital footprints.
 
 
 
-
 <div class="box">
 
 
-<h2>Available Services</h2>
+<h2>Services</h2>
 
 
 
@@ -342,9 +704,6 @@ Making unwanted problems forget your name.
 </div>
 
 
-
-
-
 <!-- REQUEST FORM -->
 
 
@@ -352,7 +711,7 @@ Making unwanted problems forget your name.
 
 
 <h2>
-CONTRACT REQUEST TERMINAL
+Contract Request
 </h2>
 
 
@@ -617,6 +976,30 @@ Bitcrusher's Top 8 Clients
 
 </div>
 
+</div>
+
+<div class="box">
+
+    <h2>Downloads</h2>
+
+    <div class="download-terminal">
+
+        <img
+            src="images/floppy.gif"
+            alt="Floppy Disk">
+
+        <h3>BITCRUSHER CLIENT v2.7</h3>
+
+        <p>
+            Download encrypted client software.<br>
+            Unauthorized duplication prohibited.
+        </p>
+
+        <button class="download-button" onclick="startDownload()">
+            DOWNLOAD
+        </button>
+
+    </div>
 
 </div>
 
@@ -631,6 +1014,88 @@ Bitcrusher's Top 8 Clients
 </div>
 
 
+
+<div id="downloadScreen">
+
+<pre id="terminalText"></pre>
+
+</div>
+
+<script>
+
+function startDownload(){
+
+    document.getElementById("downloadScreen").style.display="flex";
+
+    let text=document.getElementById("terminalText");
+
+    text.innerHTML="";
+
+    let lines=[
+
+"BITCRUSHER CLIENT v2.7",
+
+"",
+
+"Initializing...",
+
+"",
+
+"██████░░░░░",
+
+"",
+
+"Checking Encryption...",
+
+"",
+
+"Decrypting Connection...",
+
+"",
+
+"Installing Ghost Protocols...",
+
+"",
+
+"Connection Established.",
+
+"",
+
+"ACCESS GRANTED"
+
+];
+
+    let i=0;
+
+    function nextLine(){
+
+        if(i<lines.length){
+
+            text.innerHTML+=lines[i]+"\n";
+
+            i++;
+
+            setTimeout(nextLine,600);
+
+        }
+
+        else{
+
+            setTimeout(function(){
+
+                window.location.href="client.html";
+
+            },1500);
+
+        }
+
+    }
+
+    nextLine();
+
+}
+
+</script>
 
 </body>
 
